@@ -1,23 +1,27 @@
 *{
-    font-family: 'PT Serif', serif;
     margin:0;
     box-sizing: border-box;
 }
-
-body{
-    background-image: url(./fundo.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+.layout{
     display: grid;
     grid-template-areas:
         "header header"
         "aside main"
         "footer footer";
-    grid-template-rows: 60px 1fr 100px  ;
+    grid-template-rows: 60px 1fr 100px;
     grid-template-columns: 200px 1fr;
-    padding: 0 10px;
+}
+
+.title{
+    padding: 10px 10px;
+}
+
+body{
+    font-family: 'PT Serif', serif;
+    background-image: url(./fundo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header{
@@ -27,6 +31,10 @@ header{
     align-items: center;
     padding: 0 10px;
     border-bottom: grey solid 1px;
+    position: sticky;
+    top: 0px;
+    background-color:rgb(247, 108, 44);
+    z-index: 2;
 }
 header div{
     display: flex;
@@ -34,24 +42,37 @@ header div{
 }
 header img{
     width: 50px;
-    margin: 0; 
+    margin: 0;
+    background: unset;
 }
-header h1{
-     text-align: center; /*centraliza o texto na página */
-     /* border-bottom: grey solid 1px; */
-     display: inline;
-}
-
 
 main{
     grid-area: main;
     display: block; /*empurra o proximo conteudo para a proxima linha*/
-    margin: 30px;
+    padding: 0px 20px;
+}
+ol li:last-child{
+    padding-bottom: 20px;
 }
 
 aside{
     grid-area: aside;
     border-right: grey solid 1px;
+    background-color:rgb(255, 186, 130);
+}
+
+aside a{
+    text-decoration: none;
+    color: black;
+}
+
+aside ul:hover{
+    /* color:black; */
+    text-decoration: none;
+}
+aside ul{
+    list-style: none;
+    padding: 10px;
 }
 img{
     margin-left: 120px;
@@ -68,16 +89,16 @@ form label:nth-of-type(1){
     font-weight: bold; /* intensidade da font*/
     border-top: grey solid 1px ;
     display: block;
-    padding: 10px 20px;
+    padding: 10px 0px;
 }
 
 form label:nth-of-type(2){
     display: block;
-    padding: 10px;
+    padding: 10px 0px;
 }
 
 form textarea{
-    margin: 10px;
+   margin: 5px;
 }
 
 footer a:hover{
