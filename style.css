@@ -15,6 +15,12 @@
 .title{
     padding: 10px 10px;
 }
+.Logo{
+    display: flex;
+    align-items: center;
+    gap: 2pt;
+    margin: 10px;
+}
 
 body{
     font-family: 'PT Serif', serif;
@@ -36,14 +42,11 @@ header{
     background-color:rgb(247, 108, 44);
     z-index: 2;
 }
-header div{
-    display: flex;
-    align-items: center;
-}
-header img{
-    width: 50px;
+    
+header i{
+    flex: 1;
     margin: 0;
-    background: unset;
+    line-height: 0;
 }
 
 main{
@@ -59,15 +62,18 @@ aside{
     grid-area: aside;
     border-right: grey solid 1px;
     background-color:rgb(255, 186, 130);
+    flex: 1;
 }
 
+
 aside a{
+    display: flex;
+    gap: 5px;
     text-decoration: none;
     color: black;
 }
 
 aside ul:hover{
-    /* color:black; */
     text-decoration: none;
 }
 aside ul{
@@ -107,11 +113,16 @@ footer a:hover{
 }
 
 footer a{
-    display: block;
-    text-decoration: none
+    text-decoration: none;
+    padding: 0px 10px
 }
 
 footer{
     grid-area: footer;
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
     border-top: grey solid 1px;
 }
